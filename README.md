@@ -1,15 +1,14 @@
-# LCD
-This repository contains all of the code for interfacing with a 16x2 Character I2C LCD Display. This accompanies my YouTube tutorial here: https://www.youtube.com/watch?v=fR5XhHYzUK0 
+# Stout
+Display the status of a CUPS-based printer (and, if printing, of a print job) on an I2C LCD module.
 
-You can buy one of these great little I2C LCD Displays for just £4.99 on ryanteck.uk: https://ryanteck.uk/displays/11-16x2-character-i2c-lcd-display.html
+This program has been tested on a Pi 3 B+ and a Pi Zero W, and was written for a 16x2 display, but should work on any Pi as long as there is a 5V source available for the display.
 
-# Demo - Forex
-This is a demo developed by user and watcher bariskisir:
+# Installing and Running
+Stout requires pycups to run. This can be acquired via pip, which in turn requires the libcups2 package. python3-smbus is also required, due to the LCD driver.
 
-![demo_forex](demoGifs/demo_forex.gif)
+After meeting all requirements, plug in your display module and run lcd_install.sh to prepare the driver. By default, Stout will get the default printer name and job info from the locally-running instance of CUPS. To change this, modify stout.py to connect to the IP and port of your print server.
 
-I haven't been able to test it myself personally, but it looks like a cool Forex stream. If you run into any bugs with it, please feel free to reach out to bariskisir and submit a PR.
+Now, run python3 stout.py and Stout should run as intended.
 
-Thanks for watching!
-
-The Raspberry Pi Guy
+# Todo
+Maybe create an install script that handles everything else. Create alternate versions for 20x4 and OLED display modules. Add easy customization to the script, namely to change how status messages are shown. Add alternate display modes either via a command or GPIO input.
