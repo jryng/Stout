@@ -8,7 +8,7 @@ import lcddriver
 
 disp = lcddriver.lcd()
 
-cups.setServer('192.168.1.130')  # Change this for your own CUPS server IP, if using to check on a remote instance.
+cups.setServer('localhost')  # Change this for your own CUPS server IP, if using to check on a remote instance.
 ccon = cups.Connection()
 genPrinter = ccon.getDefault()   # get status updates for whichever printer is defined as the server default in CUPS.
 
