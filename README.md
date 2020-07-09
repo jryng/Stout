@@ -11,4 +11,4 @@ After meeting all requirements, plug in your display module and run lcd_install.
 Now, run python3 stout.py and Stout should run as intended.
 
 # Todo
-Maybe create an install script that handles everything else. Create alternate versions for 20x4 and OLED display modules. Add easy customization to the script, namely to change how status messages are shown. Add alternate display modes either via a command or GPIO input.
+Maybe create an install script that handles everything else. Create alternate versions for 20x4 and OLED display modules. Add easy customization to the script, namely to change how status messages are shown. Add alternate display modes either via a command or GPIO input. Implement threading so that the page progress row can update independently from the PRINTING: row.
